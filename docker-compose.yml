@@ -17,14 +17,13 @@ services :
       - db
     ports :
       - 80:80
-      - 443:443
 
   db :
     image : mysql:5.7
     container_name : ocsinventory-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD : mdp
+      MYSQL_ROOT_PASSWORD :
       MYSQL_USER : ocs
       MYSQL_PASSWORD : ocs
       MYSQL_DATABASE : ocsweb
