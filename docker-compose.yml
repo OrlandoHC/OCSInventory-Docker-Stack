@@ -1,7 +1,7 @@
 version: '3'
 services :
   web :
-    image : ocsinventory/ocsinventory-docker-image:latest
+    image : jsosic/ocsinventory:2.6
     container_name : ocsinventory-server
     environment :
       OCS_DBNAME : ocsweb
@@ -23,7 +23,7 @@ services :
     container_name : ocsinventory-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD :
+      MYSQL_ROOT_PASSWORD : ocs
       MYSQL_USER : ocs
       MYSQL_PASSWORD : ocs
       MYSQL_DATABASE : ocsweb
@@ -42,3 +42,4 @@ volumes:
     driver: local
   ocsdownload:
     driver: local
+
