@@ -32,6 +32,15 @@ services :
       - ocsdata:/var/lib/mysql
     ports :
       - 3306:3306
+      
+   phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    expose:
+      - 8080
+    ports:
+     - 8080:80
+    links: 
+      - db
 
 volumes:
   ocsdata:
